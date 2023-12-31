@@ -7,6 +7,7 @@ struct Node {
     struct Node* next;
 };
 
+//the "head" is a pointer that points to the first node
 // Function to insert a new node at the beginning of the linked list
 void insertAtBeginning(struct Node** head, int data) {
     // Create a new node
@@ -30,7 +31,7 @@ void insertAtEnd(struct Node** head, int data) {
     }
     
     // Traverse to the last node
-    struct Node* current = *head;
+    struct Node* current = *head; // current now points to the first node
     while (current->next != NULL) {
         current = current->next;
     }
@@ -69,7 +70,8 @@ void deleteNode(struct Node** head, int data) {
 
 // Function to print the linked list
 void printList(struct Node* head) {
-    struct Node* current = head;
+    st
+    
     while (current != NULL) {
         printf("%d ", current->data);
         current = current->next;
