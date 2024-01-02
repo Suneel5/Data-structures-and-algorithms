@@ -13,15 +13,16 @@ void linkedlist_traversal(struct Node *ptr )
 	ptr=ptr->next;
 }
 }
+//Case 1
 struct Node * insertAtBeginning(struct Node *head,int data){
     //create new  to be added at beginning
     struct Node * newNode=(struct Node *) malloc(sizeof(struct Node));
     newNode->next=head; //point new Node to head
     newNode->data=data;
-    return newNode; //return new node as head
+    return newNode; //return new node as new head
 }
 
-//Insert new node at paticular given index
+// Case 2 Insert new node at paticular given index
 struct Node * insertAtIndex(struct Node *head,int data,int index){
     struct Node * newNode = malloc(sizeof(struct Node));  //node to be added at index  pos
     struct Node * p =head;   
@@ -36,7 +37,7 @@ struct Node * insertAtIndex(struct Node *head,int data,int index){
     p->next=newNode;       //index-1 node points to new node
     return head;
 }
-// Function to insert a new node at the end of the linked list
+//Case 3 Function to insert a new node at the end of the linked list
 struct Node * insertAtEnd(struct Node* head, int data){
     //create new node to be added at end
     struct Node* newNode=(struct Node*)malloc(sizeof(struct Node));
@@ -52,7 +53,7 @@ struct Node * insertAtEnd(struct Node* head, int data){
     return head;
 }
 
-//Insert new node after certain given node
+//Case 4 Insert new node after certain given node
 struct Node * insertAfterNode(struct Node * head,struct Node * prevNode,int data){
     struct Node * newNode=(struct Node *)malloc(sizeof(struct Node));
     newNode->data=data;
