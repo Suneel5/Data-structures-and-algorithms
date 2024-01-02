@@ -70,8 +70,8 @@ void deleteNode(struct Node** head, int data) {
 
 // Function to print the linked list
 void printList(struct Node* head) {
-    st
-    
+
+   struct Node* current = *head; 
     while (current != NULL) {
         printf("%d ", current->data);
         current = current->next;
