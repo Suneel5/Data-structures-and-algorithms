@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-struct Node{
+typedef struct Node{
 	int data;
 	struct Node * next;
 	
@@ -31,7 +31,7 @@ struct Node * insertAtIndex(struct Node *head,int data,int index){
     while(i!=index-1){
         p = p->next;
         i++;
-    }
+    } 
     //Now p in the node at index-1 pos
     newNode->data = data;
     newNode->next=p->next;  //new node points to node at index pos
@@ -135,7 +135,6 @@ int main(){
     struct Node* head = NULL;
 
     //Insert Nodes
-	
 	head=insertAtBeginning(head,90);
 	head=insertAtBeginning(head,80);
 	head=insertAtBeginning(head,50);
