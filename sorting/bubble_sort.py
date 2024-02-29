@@ -11,20 +11,19 @@ def bubble_sort(numlist):
 def bubble_sort_adaptable(numlist):
     #larger element shifted to right side
     n = len(numlist)
-    for i in range(n):
+    for i in range(n): #loof for iteraiton/pass
         # Flag to track if any swaps were made in this iteration
         swapped = False
         
         # Perform the bubble sort for this iteration
-        for j in range(n - i - 1):
-            if numlist[j] > numlist[j + 1]:
+        for j in range(n - i - 1): #iteration for comparision or swap 
+            if numlist[j] > numlist[j + 1]:  
                 # Swap the elements
                 numlist[j], numlist[j + 1] = numlist[j + 1], numlist[j]
                 swapped = True
         
         # If no swaps were made in this iteration, the list is already sorted
         if not swapped:
-
             break
     
     return numlist

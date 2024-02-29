@@ -1,15 +1,17 @@
 def insertion_sort(mylist):
-
     n=len(mylist)
-    for i in range(n):
-        key=mylist[i]  # element to moved
-        # 11 52 65 | 7 70 3 
+    #loop for iteration or pass
+    for i in range(1,n): #1 to n-1
+        key=mylist[i]
         j=i-1
-        while(j>=0 and mylist[j]>key):
-            mylist[j+1] = mylist[j]
+
+        #finding position for insertion in sorted array
+        while(j>=0 and mylist[j]>key):# key is smaller than element at pos j
+            mylist[j+1]=mylist[j]   #so shifting element at j to j+1, now j is vacant
             j=j-1
-        mylist[j+1]=key
+        mylist[j+1]=key   #inserting key element at position j+1 as element at j is lesser than key 
     return mylist
+
 
 arr=[0,4,3,6,1,9,2]
 print(insertion_sort(arr))
