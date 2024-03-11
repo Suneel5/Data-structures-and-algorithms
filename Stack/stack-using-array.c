@@ -4,7 +4,7 @@
 
 typedef struct {
     int size;
-    int top;
+    int top;  #index of top element
     int *arr;
 }stack;
 

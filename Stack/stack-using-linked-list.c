@@ -2,7 +2,7 @@
 // mimics the behavior of a stack, where elements are added and removed from one end
 // (the top). In a linked list-based implementation,  dynamically allocate nodes
 // to store the stack elements, and each node points to the next node in the stack.
-
+// top element is head
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct node{
