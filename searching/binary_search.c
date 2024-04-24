@@ -10,7 +10,7 @@ int binary_search(int arr [],int size,int num){
             return mid;
         }
 
-        if(arr[mid]<num){
+        if(num>arr[mid]){   /* req element is  in right sub array*/
             low=mid+1;
         }
         else 
@@ -29,6 +29,5 @@ int main()
     num=4;
     index=binary_search(arr,size,num); 
     printf("Given no %d is found at  position %d ",num,index);
-
 
 }

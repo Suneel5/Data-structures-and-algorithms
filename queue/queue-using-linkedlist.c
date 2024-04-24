@@ -35,6 +35,8 @@ int isfull(){
      }
 }
 
+
+//insert at rear side
 void enqueue(int val ){
     Node *n=(Node *)malloc(sizeof(Node));
     if(n==NULL){
@@ -55,6 +57,7 @@ void enqueue(int val ){
     }
 }
 
+//remove form front side
 int dequeue(){ //only front pointer required
     int val=-1;
     if(front==NULL){
@@ -63,7 +66,7 @@ int dequeue(){ //only front pointer required
     else{
         Node *ptr=front;
         val=ptr->data;
-        front=front->next;
+        front=front->next;  //second element is new front
         free(ptr);
         return val;
     }

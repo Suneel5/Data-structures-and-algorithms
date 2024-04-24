@@ -5,7 +5,7 @@ def partition(arr,low,high):
     pivot=arr[low]
     while(i<=j):
         #find element greater than pivot
-        while(arr[i]<=pivot):
+        while( i <= high and arr[i]<=pivot):
             i+=1
         
         #find element lesser than piviot
@@ -31,6 +31,6 @@ def quicksort(arr,low,high):
     return arr
 
 # arr=[5,81,55,74,0,4,60,74,5,2,9]
-arr=[1,2,3,4,5,6,7,8]
+arr=[15,20,55,8,15]
 sorted_arr=quicksort(arr,low=0,high=len(arr)-1)
 print(sorted_arr)

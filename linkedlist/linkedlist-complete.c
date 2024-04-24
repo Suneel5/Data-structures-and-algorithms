@@ -1,17 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
-typedef struct Node{
+struct Node{
 	int data;
 	struct Node * next;
-	
 };
 
 void linkedlist_traversal(struct Node *ptr )
-{	while(ptr!=NULL){
+{	
+    while(ptr!=NULL){
 
 	printf("Element: %d\n",ptr->data);
 	ptr=ptr->next;
-}
+    }
 }
 
 //Case 1 :Insert node at beginning of linkedlist
